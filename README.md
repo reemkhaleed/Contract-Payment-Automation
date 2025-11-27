@@ -29,19 +29,29 @@ A Python automation system that monitors contract expirations and client payment
 pip install -r requirements.txt
 ```
 ## Docker Instructions
-Build the Docker image:
+Using Docker Compose:
 ```bash
-docker build -t pcautomation .
-```
+version: "3.9"
+services:
+  contracts:
+    build: .
+    command: python contracts.py
+    env_file:
+      - .env
+    volumes:
+      - ./contracts.xlsx:/app/contracts.xlsx
 
-Run the contracts script:
-```bash
-docker run --env-file .env -v $(pwd)/contracts.xlsx:/app/contracts.xlsx pcautomation
+  payments:
+    build: .
+    command: python payments.py
+    env_file:
+      - .env
+    volumes:
+      - ./payments.xlsx:/app/payments.xlsx
 ```
-
-Run the payments script:
+Run everything together:
 ```bash
-docker run --env-file .env -v $(pwd)/payments.xlsx:/app/payments.xlsx pcautomation
+docker-compose up --build
 ```
 ## Email Setup with App Password
 1.Enable 2-Step Verification on your Gmail account.
