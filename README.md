@@ -3,18 +3,25 @@ A Python automation system that monitors contract expirations and client payment
 
 ## A fully automated Python system that sends:
 
--Monthly client payment reminders
+-client payment reminders
+
 -Contract expiry alerts
--Daily automated reports
--Emails to: Client, Accountant, Sales Team
+
+-Emails to: Client, Accountant
+
 -Runs every day at 9 AM automatically via Docker + Cron
 
 ## 📌 Features
 ✔ Fully automated email reminders
+
 ✔ Dockerized — runs on any device
+
 ✔ Daily cron scheduling
+
 ✔ Secure SMTP credentials via .env
+
 ✔ Logging system
+
 ✔ Easy to deploy anywhere
 
 ##Install dependencies:
@@ -38,7 +45,9 @@ docker run --env-file .env -v $(pwd)/payments.xlsx:/app/payments.xlsx swag-autom
 ```
 ## Email Setup with App Password
 1.Enable 2-Step Verification on your Gmail account.
+
 2.Go to App Passwords → generate a password for:
    -App: Mail
    -Device: Other (name it ContractAutomation)
+   
 3.Store credentials in a .env file
