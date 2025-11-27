@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+env/
+
+# Logs
+*.log
+logs/
+
+# Credentials
+*.env
+.env
+secrets/
+smtp_credentials.json
+
+# Docker
+*.pid
+*~ 
+.dockerignore
+
+# OS Files
+.DS_Store
+Thumbs.db
