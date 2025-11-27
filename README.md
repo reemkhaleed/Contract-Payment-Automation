@@ -36,7 +36,7 @@ Run the payments script:
 ```bash
 docker run --env-file .env -v $(pwd)/payments.xlsx:/app/payments.xlsx swag-automation
 ```
-##Email Setup with App Password
+## Email Setup with App Password
 1.Enable 2-Step Verification on your Gmail account.
 2.Go to App Passwords → generate a password for:
    -App: Mail
