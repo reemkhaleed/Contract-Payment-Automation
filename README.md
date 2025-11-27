@@ -17,5 +17,9 @@ A Python automation system that monitors contract expirations and client payment
 ✔ Logging system
 ✔ Easy to deploy anywhere
 
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
 
 
