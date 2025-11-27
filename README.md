@@ -31,23 +31,23 @@ pip install -r requirements.txt
 ## Docker Instructions
 Build the Docker image:
 ```bash
-docker build -t swag-automation .
+docker build -t pcautomation .
 ```
 
 Run the contracts script:
 ```bash
-docker run --env-file .env -v $(pwd)/contracts.xlsx:/app/contracts.xlsx swag-automation
+docker run --env-file .env -v $(pwd)/contracts.xlsx:/app/contracts.xlsx pcautomation
 ```
 
 Run the payments script:
 ```bash
-docker run --env-file .env -v $(pwd)/payments.xlsx:/app/payments.xlsx swag-automation
+docker run --env-file .env -v $(pwd)/payments.xlsx:/app/payments.xlsx pcautomation
 ```
 ## Email Setup with App Password
 1.Enable 2-Step Verification on your Gmail account.
 
 2.Go to App Passwords → generate a password for:
    -App: Mail
-   -Device: Other (name it ContractAutomation)
+   -Device: Other (name it anythingyouwant)
    
 3.Store credentials in a .env file
