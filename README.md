@@ -17,9 +17,28 @@ A Python automation system that monitors contract expirations and client payment
 ✔ Logging system
 ✔ Easy to deploy anywhere
 
-Install dependencies:
-
+##Install dependencies:
 ```bash
 pip install -r requirements.txt
+```
+## Docker Instructions
+Build the Docker image:
+```bash
+docker build -t swag-automation .
+```
 
+Run the contracts script:
+```bash
+docker run --env-file .env -v $(pwd)/contracts.xlsx:/app/contracts.xlsx swag-automation
+```
 
+Run the payments script:
+```bash
+docker run --env-file .env -v $(pwd)/payments.xlsx:/app/payments.xlsx swag-automation
+```
+##Email Setup with App Password
+1.Enable 2-Step Verification on your Gmail account.
+2.Go to App Passwords → generate a password for:
+   -App: Mail
+   -Device: Other (name it ContractAutomation)
+3.Store credentials in a .env file
